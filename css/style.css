@@ -16,6 +16,8 @@
   --light-bg-cl: #f5f4fa;
 
   /* Others */
+  --indent: 30px;
+  --items: 3;
 }
 
 body {
@@ -28,6 +30,19 @@ button {
 }
 
 /* reset styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+}
 .link {
   text-decoration: none;
   color: currentColor;
@@ -35,9 +50,39 @@ button {
 
 .list {
   list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* CARD-SET */
+
+.card-set {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--indent);
+}
+
+.card-set-item {
+  flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
 }
 
 /* base style */
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  outline: 2px solid red;
+  outline-offset: -2px;
+}
 
 .work-btn-item {
   border: none;
@@ -51,6 +96,13 @@ button {
 }
 
 .hero-btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 200px;
+  min-width: 200px;
+  min-height: 50px;
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
@@ -58,7 +110,18 @@ button {
   letter-spacing: 0.06em;
   background-color: var(--accent-txt-cl);
   color: var(--btn-txt-cl);
+  border: none;
+  border-radius: 4px;
   cursor: pointer;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 99px;
+  margin-bottom: 34px;
+  border-radius: 4px;
 }
 
 .btn-mode-ligh {
@@ -77,6 +140,25 @@ button {
 
 /* Header section */
 
+.header {
+  border: 1px solid #ececec;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  padding: 32px 0 32px 0;
+}
+
+.header-nav {
+  margin-right: auto;
+}
+
+.header-list {
+  display: flex;
+  gap: 50px;
+}
+
 .header-link {
   font-family: var(--main-font);
   font-weight: 500;
@@ -84,6 +166,16 @@ button {
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
   color: var(--main-txt-cl);
+}
+
+.contacts {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.header-mail {
+  margin-right: 50px;
 }
 
 .header-phone:hover,
@@ -107,6 +199,7 @@ button {
 /* logo section */
 
 .logo-link {
+  margin-right: 93px;
   font-family: var(--secondary-font);
   font-style: normal;
   font-weight: 700;
@@ -115,6 +208,10 @@ button {
   letter-spacing: 0.03em;
   color: var(--main-txt-cl);
   text-decoration: none;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .logo-accent {
   color: var(--accent-txt-cl);
@@ -123,10 +220,12 @@ button {
 /* hero section */
 
 .hero {
+  display: flex;
   background-color: var(--dark-bg-cl);
 }
 
 .main-title {
+  margin-top: 200px;
   color: var(--title-txt-cl);
   font-family: var(--main-font);
   font-style: normal;
@@ -147,6 +246,11 @@ button {
 
 /* about section */
 
+.about-list {
+  display: flex;
+  gap: 30px;
+}
+
 .about-description {
   font-family: var(--main-font);
   font-style: normal;
@@ -158,6 +262,7 @@ button {
 }
 
 .about h3 {
+  padding-bottom: 10px;
   font-family: var(--main-font);
   font-style: normal;
   font-weight: 700;
@@ -191,6 +296,23 @@ button {
   color: var(--main-txt-cl);
 }
 
+.team-list {
+  display: flex;
+  gap: 30px;
+  --items: 4;
+}
+
+.team-item {
+  flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team h2 {
+  padding-bottom: 50px;
+}
+
 .team h3 {
   font-family: var(--main-font);
   font-style: normal;
@@ -200,6 +322,8 @@ button {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--main-txt-cl);
+  padding-bottom: 10px;
+  padding-top: 30px;
 }
 
 .team p {
@@ -211,6 +335,7 @@ button {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--contacts-txt-cl);
+  padding-bottom: 30px;
 }
 
 /* work section */
@@ -223,6 +348,7 @@ button {
   line-height: calc(36 / 18);
   letter-spacing: 0.06em;
   color: var(--main-txt-cl);
+  padding-bottom: 4px;
 }
 
 .work p {
@@ -236,8 +362,20 @@ button {
 }
 
 /* footer section */
+.footer-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
 
 .footer-logo-link {
+  margin-bottom: 20px;
+  margin-top: 60px;
   font-family: var(--secondary-font);
   font-style: normal;
   font-weight: 700;
