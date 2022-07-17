@@ -37,7 +37,7 @@ h4,
 h5,
 h6,
 p {
-  margin: 0;
+  margin: 0 auto;
 }
 
 img {
@@ -85,6 +85,7 @@ img {
 }
 
 .work-btn-item {
+  padding: 6px 22px;
   border: none;
   font-family: inherit;
   font-weight: 500;
@@ -119,7 +120,6 @@ img {
   display: flex;
   justify-content: center;
   gap: 8px;
-  margin-top: 99px;
   margin-bottom: 34px;
   border-radius: 4px;
 }
@@ -142,12 +142,12 @@ img {
 
 .header {
   border: 1px solid #ececec;
+  padding: 24px 0 24px 0;
 }
 
 .header-container {
   display: flex;
   align-items: center;
-  padding: 32px 0 32px 0;
 }
 
 .header-nav {
@@ -226,6 +226,7 @@ img {
 
 .main-title {
   margin-top: 200px;
+  max-width: 696px;
   color: var(--title-txt-cl);
   font-family: var(--main-font);
   font-style: normal;
@@ -245,6 +246,14 @@ img {
 }
 
 /* about section */
+.about-descr {
+  padding-top: 0;
+}
+
+
+.about-item {
+  width: 270px;
+}
 
 .about-list {
   display: flex;
@@ -252,6 +261,7 @@ img {
 }
 
 .about-description {
+  margin-bottom: 50px;
   font-family: var(--main-font);
   font-style: normal;
   font-weight: 700;
@@ -260,6 +270,7 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
 }
+
 
 .about h3 {
   padding-bottom: 10px;
@@ -310,7 +321,20 @@ img {
 }
 
 .team h2 {
-  padding-bottom: 50px;
+  margin-bottom: 50px;
+  font-family: var(--main-font);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: calc(42 / 36);
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--main-txt-cl);
+}
+
+.team-item-wrapper {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .team h3 {
@@ -323,7 +347,6 @@ img {
   letter-spacing: 0.03em;
   color: var(--main-txt-cl);
   padding-bottom: 10px;
-  padding-top: 30px;
 }
 
 .team p {
@@ -335,12 +358,23 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--contacts-txt-cl);
-  padding-bottom: 30px;
 }
 
 /* work section */
 
-.work h3 {
+.work {
+  padding-top: 99px;
+  padding-bottom: 89px;
+}
+
+
+.work-cards-wrapper {
+padding: 20px 24px;
+border: 1px solid #EEEEEE;
+}
+
+
+.work-cards-title {
   font-family: var(--main-font);
   font-style: normal;
   font-weight: 700;
@@ -348,10 +382,10 @@ img {
   line-height: calc(36 / 18);
   letter-spacing: 0.06em;
   color: var(--main-txt-cl);
-  padding-bottom: 4px;
+  margin-bottom: 4px;
 }
 
-.work p {
+.work-cards-text {
   font-family: var(--main-font);
   font-style: normal;
   font-weight: 400;
@@ -362,6 +396,13 @@ img {
 }
 
 /* footer section */
+
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+
 .footer-container {
   display: flex;
   flex-direction: column;
@@ -374,8 +415,6 @@ img {
 }
 
 .footer-logo-link {
-  margin-bottom: 20px;
-  margin-top: 60px;
   font-family: var(--secondary-font);
   font-style: normal;
   font-weight: 700;
@@ -383,6 +422,7 @@ img {
   line-height: calc(31 / 26);
   letter-spacing: 0.03em;
   color: var(--btn-txt-cl);
+  padding-bottom: 20px;
 }
 
 .footer-logo-accent {
